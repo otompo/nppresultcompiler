@@ -1,0 +1,319 @@
+*{
+  font-family: 'Poppins', sans-serif ;
+  /* margin: 0 auto; */
+}
+body{
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    margin-top: 50px;    
+    padding: 0;
+    text-decoration: none;
+    
+}
+
+main {
+    min-height: 90vh;
+}
+
+h3{
+    padding:1rem 0;
+}
+
+.rating span{
+    margin: 0.1rem;
+}
+
+h1{
+    font-size:1.8rem ;
+    padding: 1rem
+}
+
+h2{
+    font-size:1.4rem ;
+    padding: 0.5rem 0
+}
+
+
+
+
+
+
+/* carousel */
+.frontpage{
+  background-image:
+  linear-gradient(rgba(253, 253, 253, 0.616), rgba(255, 255, 255, 0.486), rgba(19, 46, 122, 0.925)),
+  url('./img/recycling.jpg');
+  background-size: cover;
+  
+
+}
+.carousel{
+  margin: 45px;
+  
+}
+
+.carousel img{
+  height: 80vh;
+  border-radius: 100%;
+  border:5px solid #ffffff;
+  padding: 15px;
+
+ 
+}
+.frontpage button{
+  border:1px solid #fff;
+  margin-left:-15px;
+}
+.frontpage a{
+  text-decoration: none;
+}
+.profile_image{
+  width: 40vh;
+    height: 40vh;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 50%;
+    border:5px solid #08b450 ;
+    box-shadow: 2px 0px 2px 0px #949494; 
+  
+    
+  }
+  .textpro{
+    line-height: 3.5rem;
+    background: #08b450;
+    color: #fff;
+  }
+  
+  footer{
+    background-color: #132f7a;
+    color: #fff;
+    margin: 5px 0 0 0;
+  }
+  
+  .btn-primary{
+    background-color: #132f7a !important;
+  }
+
+  .feature{
+    text-align: center;
+    /* margin: 0 auto; */
+  } 
+  
+  .feature a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .feature-wrap i{
+    font-size: 48px;
+    height: 100px;
+    width: 100px;
+    margin: 3px;
+    background-color:#fff ;
+    border-radius: 100%;
+    line-height: 100px;
+    text-align: center;
+    border: 3px solid #fff;
+    box-shadow:inset 0px 0 0 5px #b4b4b4;
+    box-shadow: 0px 0 0 5px #b4b4b4;
+    color: #ff0000;
+    /* float: left; */
+    margin-right: 45px;
+  }
+  
+  .sidebar .list-group-item
+  {
+    
+    overflow:hidden;  
+    position: relative;
+    display: block; 
+    padding: 25px;
+    /* margin-bottom: -1px; */
+    background-color: #132f7a;
+    border: 1px solid #ddd;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  .sidebar .list-group-item i{
+    font-size: 20px;
+    width: 40px;
+    background-color:#fff ;
+    border-radius: 100%;
+    line-height: 40px;
+    text-align: center;
+    border: 3px solid #fff;
+    box-shadow:inset 0px 0 0 5px #b4b4b4;
+    box-shadow: 0px 0 0 5px #b4b4b4;
+    color: #ff0000;
+    margin-right: 15px;
+    
+    
+  }
+  
+  .info_text{
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 2px 3px #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    
+  }
+  
+  
+  .animate_text p{
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 1px 2px 3px #000;
+  }
+  
+  .navbar{
+    height: 10vh !important;
+    font-size: 18px;
+    font-family: sans-serif;
+  }
+
+  header{
+    margin-bottom: 70px;
+    
+  }
+  
+  
+  
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .pickupform{     
+      width: 30rem;
+      /* margin-left:-170px; */
+    }
+  }
+  .logo{
+    height: 50px !important;
+    width: 50px !important;
+  }
+  
+  
+  
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    /* .frontpage{
+
+      background: linear-gradient(rgba(3, 185, 42, 0.76),rgba(253, 253, 253, 0.616),rgba(255, 255, 255, 0.486)) ;
+    } */
+    .carousel{
+      margin: 25px;
+    }
+    
+    .carousel img{
+      height: 50vh;
+      
+    }
+    .navbar-nav{
+      background-color: #132f7a;
+      padding: 15px;
+      margin: 10px;
+    }
+    .navbar-dark .navbar-nav .nav-link{
+      color: #ffffff;
+    }
+    .logo{
+      width: 100px;
+    }
+
+    .frontpage button{
+     
+      margin-left:0;
+    }
+    
+  }
+  
+  
+  
+  
+  /* Portrait and Landscape */
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+  
+    .carousel{
+      margin: 25px;
+    }
+    
+    .carousel img{
+      height: 55vh;
+  
+    }
+    .frontpage button{     
+      margin-left:0;
+    }
+
+}
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .carousel{
+      margin: 25px;
+    }
+    
+    .carousel img{
+      height: 40vh;
+     
+    }
+    .frontpage button{     
+      margin-left:0;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    .carousel{
+      margin: 25px;
+    }
+    
+    .carousel img{
+      height: 40vh;
+     
+    }
+    .info_text{
+      margin: 10px;
+      text-align: center;
+    }
+    .frontpage button{     
+      margin-left:0;
+    }
+}
+
+
+
+
+
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+    .info_text{
+      margin: 10px;
+    }
+    .carousel img{
+      height: 40vh;
+     border: 1px solid red;
+    }
+}

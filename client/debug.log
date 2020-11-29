@@ -1,0 +1,21 @@
+[1004/202518.260:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1004/202518.259:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1004/202518.282:ERROR:exception_snapshot_win.cc(99)] thread ID 4088 not found in process
+[1004/202518.282:ERROR:exception_snapshot_win.cc(99)] thread ID 17000 not found in process
+[1007/093639.834:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\AgroFeed\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\73cfe703-4b0e-4123-8020-3da76c4697ae: The system cannot find the path specified. (0x3)
+[1007/093639.850:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\AgroFeed\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\b84f3d79-ec88-4f60-9ab9-f9fd94fa33db: The system cannot find the path specified. (0x3)
+[1007/093639.856:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\AgroFeed\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\ee5dd179-8c05-427e-a186-857f54a74803: The system cannot find the path specified. (0x3)
+[1007/093639.856:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1009/103847.560:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1017/133216.951:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1018/092038.968:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1018/101434.872:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1021/194508.557:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1022/235720.082:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1022/235720.880:ERROR:exception_snapshot_win.cc(99)] thread ID 14724 not found in process
+[1023/154438.918:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1029/210401.641:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1113/221945.316:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1114/115536.769:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1115/102306.859:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1129/215326.061:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
