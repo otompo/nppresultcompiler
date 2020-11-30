@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import {createResults} from '../actions/pollingResultActions'
 import Sidebar from '../components/Sidebar'
 import Message from '../components/Message'
+import Loader from '../components/Loader'
 import {POLLINGRESULTS_CREATE_RESET} from '../constants/pollingResultConstants'
 
 
@@ -18,7 +19,7 @@ const EnterResultScreen = ({history}) => {
     const [comment, setComment]=useState('')
 
     const pollingResultsCreate= useSelector((state)=>state.pollingResultsCreate)
-    const {result, success, error} =pollingResultsCreate
+    const {result, loading, success, error} =pollingResultsCreate
 
 
     const userLogin = useSelector((state) => state.userLogin)
@@ -61,6 +62,7 @@ const EnterResultScreen = ({history}) => {
 
                  <Card.Body>
                   <Card.Title className="text-center">{success && <Message variant='success' >RESULTS SENT SUCCESSFULLY</Message>}</Card.Title>         
+                    {loading && <Loader />}
                     <Card.Text>
                             <Form 
                             className='pickupform'
