@@ -8,7 +8,6 @@ const Slider = () => {
 
   return(
     <div>   
-                  
 
                     <Carousel className='carousel'>
                         <Carousel.Item>

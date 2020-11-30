@@ -31,7 +31,7 @@ app.use(express.json())
 
 app.use('/api/users', userRoutes)
 app.use('/api/upload', uploadRoutes)
-app.use('/api/upload', uploadRoutes)
+app.use('/api/results', pollingResultsRoutes)
 app.use('/api/myresults', pollingResultsRoutes)
 app.get('/api/config/paypal', (req,res)=> 
     res.send(process.env.PAYPAL_CLIENT_ID)
