@@ -16,8 +16,9 @@ const ViewResultScreen = ({history}) => {
 
     const userLogin = useSelector((state)=>state.userLogin)
     const{userInfo} =userLogin
-
-  
+    
+    const [parlimentary,setParlimentary] = useState(0)
+    const [presidential,setPresidential] = useState(0)
 
 
     useEffect(()=>{  
@@ -28,6 +29,16 @@ const ViewResultScreen = ({history}) => {
                 history.push('/')
             }
     // eslint-disable-next-line 
+        
+       //lets loop through and sum all the presidential and parlimentary results
+        var parliment = 0;
+        var president = 0;
+        results.map(result=>{
+            parliment += result.paliamentaryResult;
+            president += result.presidentialResult;
+         })
+        setParlimentary(parliment);
+        setPresidential(president);
     },[dispatch, history, userInfo])
 
 
@@ -41,9 +52,8 @@ const ViewResultScreen = ({history}) => {
                                 <Card style={{ width: '18rem', backgroundColor:'#132f7a', color:'#ffffff' }}>                                
                                 <Card.Body>
                                     <Card.Title>PRESIDENTIAL RESULTS</Card.Title>
-                                    <Card.Text>
-                                                                   
-                                     78459                              
+                                    <Card.Text>                             
+                                       {presidential}                            
                                     </Card.Text>
                                    
                                 </Card.Body>
@@ -55,7 +65,7 @@ const ViewResultScreen = ({history}) => {
                                 <Card.Body>
                                     <Card.Title>PALIAMENTARY RESULTS</Card.Title>
                                     <Card.Text>
-                                        48514
+                                    {parlimentary}
                                     </Card.Text>
                                    
                                 </Card.Body>
