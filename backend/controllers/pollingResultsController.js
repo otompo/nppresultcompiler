@@ -67,8 +67,20 @@ const getPollingResults = asyncHandler(async (req, res) => {
   res.json(pollingresults)
 })
 
+
+
+
+// @desc    Get logged in user orders
+// @route   GET /api/orders/myorders
+// @access  Private
+const getMyResults = asyncHandler(async (req, res) => {
+  const results = await PollingResults.find({ user: req.user._id })
+  res.json(results)
+})
+
 export {
     addPollingResults,
     getPollingRecordsById,
     getPollingResults,
+    getMyResults
 }

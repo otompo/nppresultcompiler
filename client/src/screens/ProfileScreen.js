@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Table, Form, Button, Row, Col, Card } from 'react-bootstrap'
-import { LinkContainer } from 'react-router-bootstrap'
+// import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
+import { listMyResults } from '../actions/pollingResultActions'
 import {USER_UPDATE_PROFILE_RESET} from '../constants/userConstants'
 
 const ProfileScreen = ({ location, history }) => {
@@ -25,6 +26,10 @@ const ProfileScreen = ({ location, history }) => {
   const userUpdateProfile = useSelector((state) => state.userUpdateProfile)
   const { success } = userUpdateProfile
 
+
+  const resultsListMy = useSelector((state) => state.resultsListMy)
+  const { loading: loadingResults, error: errorResults, results } = resultsListMy
+
   useEffect(() => {
     if (!userInfo) {
       history.push('/')
@@ -32,8 +37,8 @@ const ProfileScreen = ({ location, history }) => {
       if (!user || !user.name || success) {
         dispatch({type:USER_UPDATE_PROFILE_RESET})
         dispatch(getUserDetails('profile'))
+        dispatch(listMyResults())
 
-    
       } else {
         setName(user.name)
         setPhone(user.phone)
@@ -115,8 +120,38 @@ const ProfileScreen = ({ location, history }) => {
         </Card>
       
       </Col>
-      <Col md={8} className='my-5'>
-      
+       <Col md={8} className='my-5'>
+        <h2>MY RESULTS</h2>
+        {loadingResults ? (
+          <Loader />
+        ) : errorResults ? (
+          <Message variant='danger'>{errorResults}</Message>
+        ) : (
+          <Table striped bordered hover responsive className='table-sm'>
+            <thead>
+              <tr>
+                <th>#</th>               
+                <th>POLLING STATION NAME</th>
+                <th>PRESIDENTIAL RESULTS</th>
+                <th>PALIAMENTARY RESULTS</th>
+                <th>COMMENTS</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              {results.map((result,counter) => (
+                <tr key={result._id}>
+                  <td>{counter+1}</td>
+                  <td>{result.pollingStationName}</td>
+                  <td>{result.presidentialResult}</td>                 
+                  <td>{result.paliamentaryResult}</td>
+                  <td>{result.comment}</td>                 
+                  <td className='bg-primary'><i className='fas fa-edit'></i>Edit</td>                 
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        )}
       </Col>
     </Row>
    

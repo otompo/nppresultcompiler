@@ -6,6 +6,12 @@ import {
     POLLINGRESULTS_LIST_REQUEST,
     POLLINGRESULTS_LIST_SUCCESS,
     POLLINGRESULTS_LIST_FAIL,
+      
+    POLLINGRESULTS_LIST_MY_REQUEST,
+    POLLINGRESULTS_LIST_MY_SUCCESS,
+    POLLINGRESULTS_LIST_MY_FAIL,
+    POLLINGRESULTS_LIST_MY_RESET
+
   } from '../constants/pollingResultConstants'
   
   export const pollingResultsCreateReducer = (state = {}, action)=>{
@@ -55,3 +61,29 @@ import {
     }
   }
   
+
+
+  
+
+export const resultsListMyReducer = ( state={results:[]}, action) => {
+    switch (action.type) {
+      case POLLINGRESULTS_LIST_MY_REQUEST:
+        return {
+          loading: true,
+        }
+      case POLLINGRESULTS_LIST_MY_SUCCESS:
+        return {
+          loading: false,
+          results: action.payload,
+        }
+      case POLLINGRESULTS_LIST_MY_FAIL:
+        return {
+          loading: false,
+          error: action.payload,
+        }
+      case POLLINGRESULTS_LIST_MY_RESET:
+        return { results: [] }
+      default:
+        return state
+    }
+  }

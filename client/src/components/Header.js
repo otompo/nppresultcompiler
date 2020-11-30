@@ -37,10 +37,10 @@ const Header = () => {
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
             
-                  <div className="dropdown-divider"></div>
+                  {/* <div className="dropdown-divider"></div>
                   <LinkContainer to='/admin/binreportslist'>
                     <NavDropdown.Item>Bin Reports</NavDropdown.Item>
-                  </LinkContainer>                 
+                  </LinkContainer>                  */}
                   <div className="dropdown-divider"></div>
                 </NavDropdown>
               )}

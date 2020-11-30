@@ -8,6 +8,10 @@ import {
   POLLINGRESULTS_LIST_SUCCESS,
   POLLINGRESULTS_LIST_FAIL,
 
+  POLLINGRESULTS_LIST_MY_REQUEST,
+  POLLINGRESULTS_LIST_MY_SUCCESS,
+  POLLINGRESULTS_LIST_MY_FAIL,
+
 } from '../constants/pollingResultConstants'
 
 
@@ -82,4 +86,41 @@ export const listResults = () => async (dispatch, getState) => {
   }
 }
 
+
+
+
+
+
+export const listMyResults = () => async (dispatch, getState) => {
+  try {
+    dispatch({
+      type: POLLINGRESULTS_LIST_MY_REQUEST,
+    })
+
+    const {
+      userLogin: { userInfo },
+    } = getState()
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    }
+
+    const { data } = await axios.get(`/api/myresults`, config)
+
+    dispatch({
+      type: POLLINGRESULTS_LIST_MY_SUCCESS,
+      payload: data,
+    })
+  } catch (error) {
+    dispatch({
+      type: POLLINGRESULTS_LIST_MY_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
 

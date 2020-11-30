@@ -12,7 +12,7 @@ import {
     userDeleteReducer,
     userUpdateReducer,
  } from './reducers/userReducers'
-import {pollingResultsCreateReducer, pollingResultsListReducer } from './reducers/pollingResultReducer'
+import {pollingResultsCreateReducer, pollingResultsListReducer, resultsListMyReducer } from './reducers/pollingResultReducer'
 
 
  
@@ -38,8 +38,8 @@ const reducer= combineReducers({
     pollingResultsCreate: pollingResultsCreateReducer,
     // POLLING STATION LIST REDUCER
     pollingResultsList: pollingResultsListReducer,
-   
-
+       
+    resultsListMy:resultsListMyReducer
     
 
 })

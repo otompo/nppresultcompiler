@@ -9,7 +9,7 @@ import {notFound, errorHandler} from './middleware/errorMiddleware.js'
 
 import userRoutes from './routes/userRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
-import  pollingResultsRoutes from './routes/pollingResultsRoutes.js'
+import pollingResultsRoutes from './routes/pollingResultsRoutes.js'
 
 
 
@@ -31,7 +31,8 @@ app.use(express.json())
 
 app.use('/api/users', userRoutes)
 app.use('/api/upload', uploadRoutes)
-app.use('/api/results', pollingResultsRoutes)
+app.use('/api/upload', uploadRoutes)
+app.use('/api/myresults', pollingResultsRoutes)
 app.get('/api/config/paypal', (req,res)=> 
     res.send(process.env.PAYPAL_CLIENT_ID)
 )

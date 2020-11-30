@@ -2,10 +2,9 @@ import React from 'react'
 import { Carousel, Image} from 'react-bootstrap'
 import Slider1 from '../img/slide1.jpg'
 import Slider2 from '../img/slide2.jpg'
-import Slider3 from '../img/slide3.jpg'
+import Slider3 from '../img/slide3.jpeg'
 
 const Slider = () => {
- 
 
   return(
     <div>   
